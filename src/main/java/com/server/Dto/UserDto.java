@@ -1,9 +1,11 @@
-package com.server.model;
+package com.server.Dto;
+
+import com.server.model.Role;
 
 import java.util.HashSet;
 import java.util.Set;
 
-public class JsonUser {
+public class UserDto {
     private Long id;
     private String name;
     private String password;
@@ -52,7 +54,7 @@ public class JsonUser {
 
     @Override
     public String toString() {
-        return "JsonUser{" +
+        return "UserDto{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", password='" + password + '\'' +

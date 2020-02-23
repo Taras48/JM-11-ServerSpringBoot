@@ -1,4 +1,4 @@
-package com.server.repository;
+package com.server.dao;
 
 import com.server.model.User;
 import org.springframework.beans.factory.annotation.Autowired;

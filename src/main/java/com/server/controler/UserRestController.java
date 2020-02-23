@@ -44,7 +44,7 @@ public class UserRestController {
     public void putUpdateUser(@RequestBody User user) {
         User upUser = userService.getUserById(user.getId());
         Set<Role> roles = user.getRoles();
-        for (Role role:roles){
+        for (Role role : roles) {
             upUser.getRoles().add(roleService.findAllByRole(role.getRole()));
         }
         upUser.setName(user.getName());
@@ -65,11 +65,7 @@ public class UserRestController {
 
     @PostMapping(value = "/{name}")
     public User getUserByName(@PathVariable("name") String name) {
-        return userService.getUserByName(name);//доелать
+        return userService.getUserByName(name);
     }
 
-    /*@PostMapping
-    public User getUserByName(@RequestBody User user) {
-        return userService.getUserByName(user.getName());//доелать
-    }*/
 }
